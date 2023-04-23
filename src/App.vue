@@ -84,6 +84,7 @@ import { ref, watchEffect, computed, onMounted, onUnmounted } from "vue";
 import { fetch, save, filters, generateId } from "./util/todoStorage";
 export default {
   setup() {
+    console.log("hello-word");
     const todosRef = ref(fetch());
     watchEffect(() => {
       save(todosRef.value);
